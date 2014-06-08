@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+The data will be deleted. Click ok to delete.
+
+<form method="POST" action="#">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit"> Submit </button>
+</form>
+
+{% endblock content %}
+
